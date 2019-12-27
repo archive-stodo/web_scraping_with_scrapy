@@ -21,7 +21,7 @@ NEWSPIDER_MODULE = 'finviz.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
-# Configure maximum concurrent requests performed by Scrapy (default: 16)
+# Configure maximum concurrent requests performed by Scrapy (default: 12)
 #CONCURRENT_REQUESTS = 10
 
 # Configure a delay for requests for the same website (default: 0)
@@ -29,8 +29,8 @@ ROBOTSTXT_OBEY = False
 # See also autothrottle settings and docs
 #DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 16
-#CONCURRENT_REQUESTS_PER_IP = 16
+#CONCURRENT_REQUESTS_PER_DOMAIN = 10
+#CONCURRENT_REQUESTS_PER_IP = 10
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False

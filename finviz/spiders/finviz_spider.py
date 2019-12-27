@@ -18,10 +18,7 @@ class FinvizSpider(scrapy.Spider):
     overview_url = screener_url + overview_screen + not_small_with_good_dividend
 
     def start_requests(self):
-        urls = ['https://finviz.com/screener.ashx?v=121&f=cap_smallover,fa_div_o3&o=industry']
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.scrap_valuation)
-
+        yield scrapy.Request(url=FinvizSpider.valuation_url, callback=self.scrap_valuation)
         yield scrapy.Request(url=FinvizSpider.overview_url, callback=self.scrap_overview)
 
     def scrap_overview(self, response):
@@ -53,7 +50,7 @@ class FinvizSpider(scrapy.Spider):
 
     def scrap_valuation(self, response):
         content, parsed_rows = self.parse_data_rows_on_website(response, self.parse_valuation_columns)
-        self.save_rows_array_to_file(parsed_rows, 'output.txt')
+        self.save_rows_array_to_file(parsed_rows, 'valuation.txt')
 
         next_page_a_href = content.css('a[href].tab-link').extract()[-1]
         sel = Selector(text=next_page_a_href)

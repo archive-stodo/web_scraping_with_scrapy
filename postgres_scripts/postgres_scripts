@@ -1,0 +1,11 @@
+CREATE TABLE valuation(
+	id INTEGER PRIMARY KEY,
+	ticker VARCHAR(10),
+	market_cap INTEGER,
+	p_to_s NUMERIC,
+	p_to_b NUMERIC,
+	p_to_c NUMERIC,
+	price NUMERIC
+)
+
+select * from valuation

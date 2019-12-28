@@ -179,7 +179,6 @@ class FinvizSpider(scrapy.Spider):
             row_dict = dict()
             row_dict['id'] = row[0]
             row_dict['ticker'] = row[1]
-            row_dict['ticker'] = row[1]
             row_dict['market_cap'] = row[2]
             row_dict['p/s'] = row[6]
             row_dict['p/b'] = row[7]

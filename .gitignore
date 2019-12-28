@@ -1,6 +1,5 @@
-./financial.txt
-./overview.txt
-./ownership.txt
-./technical.txt
-./valuation.txt
-*.txt
+financial.txt
+overview.txt
+ownership.txt
+technical.txt
+valuation.txt

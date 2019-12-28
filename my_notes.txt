@@ -4,3 +4,8 @@ To activate new .gitignore settings:
 
 To run, just run
 PycharmProjects/finviz/finviz$ scrapy crawl spider-name
+
+
+pip install sqlalchemy
+pip install psycopg2
+

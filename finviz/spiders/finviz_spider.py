@@ -1,9 +1,6 @@
 import scrapy
 import pandas as pd
 import logging
-
-# to run, just run
-# PycharmProjects/finviz/finviz$ scrapy crawl spider-name
 from scrapy import Selector
 
 

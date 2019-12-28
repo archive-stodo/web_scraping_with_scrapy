@@ -1,0 +1,6 @@
+To activate new .gitignore settings:
+    add chanaged .gitignore then commit and then:
+    git config --global core.excludesfile ~/.gitignore_global
+
+To run, just run
+PycharmProjects/finviz/finviz$ scrapy crawl spider-name

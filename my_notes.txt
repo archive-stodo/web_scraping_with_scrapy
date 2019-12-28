@@ -9,3 +9,10 @@ PycharmProjects/finviz/finviz$ scrapy crawl spider-name
 pip install sqlalchemy
 pip install psycopg2
 
+overview with code on sqlalchemy
+https://itnext.io/sqlalchemy-orm-connecting-to-postgresql-from-scratch-create-fetch-update-and-delete-a86bc81333dc
+
+how to insert data - different ways
+https://www.codementor.io/@bruce3557/graceful-data-ingestion-with-sqlalchemy-and-pandas-pft7ddcy6
+
+https://bytefish.de/blog/first_steps_with_sqlalchemy/

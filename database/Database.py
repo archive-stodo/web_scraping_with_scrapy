@@ -1,7 +1,10 @@
 import sqlalchemy as db
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 class Database:
     engine = db.create_engine('postgresql://postgres:postgres@localhost/stock_fundamental')
+    session = sessionmaker(bind=engine)
 
     def __init__(self):
         self.connection = self.engine.connect()
@@ -14,7 +17,11 @@ class Database:
         for data in fetchQuery.fetchall():
             print(data)
 
-db = Database()
-result = db.fetchQuery("SELECT * from valuation")
 
-print(result)
+Base = declarative_base()
+
+
+# db = Database()
+# result = db.fetchQuery("SELECT * from valuation")
+#
+# print(result)

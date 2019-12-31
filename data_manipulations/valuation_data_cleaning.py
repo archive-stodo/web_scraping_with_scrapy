@@ -42,10 +42,10 @@ class ValuationDataCleaner:
         self.df.drop("ticker", axis=1, inplace=True)
 
     def to_numeric_where_needed(self):
-        cleaner.df['p_to_s'] = cleaner.df['p_to_s'].astype(float)
-        cleaner.df['p_to_b'] = cleaner.df['p_to_b'].astype(float)
-        cleaner.df['p_to_c'] = cleaner.df['p_to_c'].astype(float)
-        cleaner.df['price'] = cleaner.df['price'].astype(float)
+        self.df['p_to_s'] = self.df['p_to_s'].astype(float)
+        self.df['p_to_b'] = self.df['p_to_b'].astype(float)
+        self.df['p_to_c'] = self.df['p_to_c'].astype(float)
+        self.df['price'] = self.df['price'].astype(float)
 
     def convert_df_to_db_ready_one(self):
         self.load_scraped_file()

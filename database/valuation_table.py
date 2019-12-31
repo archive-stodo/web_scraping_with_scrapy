@@ -15,7 +15,10 @@ class Valuation(Base):
     p_to_b = Column(Float)
     p_to_c = Column(Float)
     price = Column(Float)
-
+    #
+    # __table__ = Table(__tablename__, Base.metadata,
+    #     autoload=True,
+    #     autoload_with=Database.engine)
     def __init__(self):
         self.Session = sessionmaker(bind=Database.engine)
 
@@ -41,5 +44,3 @@ class Valuation(Base):
 
 valuation = Valuation()
 # valuation.bulk_insert()
-valuation.get_all()
-
